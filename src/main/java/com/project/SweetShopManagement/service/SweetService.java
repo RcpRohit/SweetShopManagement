@@ -16,9 +16,9 @@ public class SweetService
     public Sweet addSweet(Sweet sweet)
     {
         int quantity = sweet.getQuantity();
-//        if (quantity < 0) {
-//            throw new IllegalArgumentException("Quantity cannot be negative");
-//        }
+        if (quantity < 0) {
+            throw new IllegalArgumentException("Quantity cannot be negative");
+        }
         return sweetRepository.save(sweet);
     }
 
